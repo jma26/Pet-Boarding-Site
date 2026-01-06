@@ -1,48 +1,52 @@
-import CompanyHero from './assets/three-dogs-pet-hero.jpg';
 import EmeraldEmployeesWithDogs from './assets/emerald-resort-employees-with-dogs.jpg';
 import CatBoarding from './assets/cat-boarding-accommodation.jpg';
 import DogBoarding from './assets/dog-boarding-accommodation.jpg';
 import DogGrooming from './assets/dog-grooming.jpg';
 import DogDaycare from './assets/dog-daycare.jpg';
+import { useRef, useState } from 'react';
 
 function App() {
+  const iframeRef = useRef(null);
+  const [isPaused, setIsPaused] = useState(false);
+
+  const toggleVideo = () => {
+    if (!iframeRef.current) return;
+
+    iframeRef.current.contentWindow.postMessage(
+      JSON.stringify({
+        method: isPaused ? "play" : "pause",
+      }),
+      "*"
+    );
+    setIsPaused((prev) => !prev);
+  }
   return (
     <>
-      {/* Hero */}
-      {/* <div
-        className="hero min-h-screen"
-        style={{
-          backgroundImage:
-            `url(${CompanyHero})`,
-        }}
-      >
-        <div className="hero-overlay"></div>
-        <div className="hero-content text-neutral-content text-center">
-          <div className="max-w-md">
-            <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-            <p className="mb-5">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-              quasi. In deleniti eaque aut repudiandae et a id nisi.
-            </p>
-            <button className="btn btn-primary">Get Started</button>
-          </div>
+      {/* Hero Video */}
+      <section className="max-w-7xl mx-auto w-full">
+        {/* Video */}
+        <div
+          id="video-wrapper"
+          className="relative aspect-video w-full overflow-hidden"
+        >
+          <iframe
+            ref={iframeRef}
+            loading="lazy"
+            className="absolute inset-0 h-full w-full"
+            src="https://player.vimeo.com/video/835607413?h=043d2f293f&background=1&autoplay=1&loop=1&muted=1&badge=0&autopause=0"
+            allow="autoplay"
+            title="Background video"
+          ></iframe>
         </div>
-      </div> */}
-      {/* Company Info */}
-      <section className="hero">
-        <div>
-          <div className="hero-content flex-col gap-4 pt-4 pb-8 self-start w-full">
-            <img
-              src={CompanyHero}
-              className="rounded-lg shadow-2xl"
-              alt="Three dogs sitting together"
-            />
-            <div className="lg:mx-12">
-              <h1 className="font-bold text-center text-5xl">Welcome to Maraboon<br />Pet Resort</h1>
-              <p className="pt-4 text-center">
-                Emerald's state of the art pet boarding and grooming facility. We offer top-notch daycare and boarding experiences for your furry friends while you're away.
-              </p>
-            </div>
+        {/* Hero CTA */}
+        <div className="mx-auto max-w-5xl px-4 py-8 text-center">
+          <h1 className="font-bold text-center text-5xl">Maraboon Pet Resort</h1>
+          <p className="mt-4">Best of care, safety, and comfort for your pets while you're away</p>
+          <div className="mt-6 flex justify-center gap-4">
+            <button className="btn btn-primary">Make a Reservation</button>
+            <button className="btn btn-outline" onClick={toggleVideo} aria-pressed={isPaused}>
+              {isPaused ? "Play video" : "Pause video"}
+            </button>
           </div>
         </div>
       </section>
@@ -57,7 +61,7 @@ function App() {
             />
             <div className="lg:mx-12">
               <h1 className="font-bold text-center text-5xl">Our Services</h1>
-              <p className="py-4 text-center">
+              <p className="max-w-2xl mx-auto py-4 text-center">
                 Our brand new accommodation has been specifically designed to ensure all of our furry friends have the safest and most comfortable stay with us while you’re away
               </p>
               <ul className="list-disc list-inside max-w-fit mx-auto">
@@ -70,7 +74,7 @@ function App() {
             </div>
           </div>
           {/* Service Cards */}
-          <div className="flex justify-evenly flex-wrap gap-12">
+          <div className="flex justify-evenly flex-wrap gap-12 max-w-7xl mx-auto">
             <div className="card bg-base-100 p-4 w-full shadow-sm">
               <figure>
                 <img
