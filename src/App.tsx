@@ -3,6 +3,10 @@ import CatBoarding from './assets/cat-boarding-accommodation.jpg';
 import DogBoarding from './assets/dog-boarding-accommodation.jpg';
 import DogGrooming from './assets/dog-grooming.jpg';
 import DogDaycare from './assets/dog-daycare.jpg';
+import KennelIcon from './assets/icons/kennel-icon.svg';
+import GroomingIcon from './assets/icons/grooming-icon.svg';
+import PawsIcon from './assets/icons/paws-icon.svg';
+import TennisBallIcon from './assets/icons/tennis-ball-icon.svg';
 import { useRef, useState } from 'react';
 
 function App() {
@@ -60,7 +64,11 @@ function App() {
               alt="Emerald employees with dogs outside"
             />
             <div className="lg:mx-12">
-              <h1 className="font-bold text-center text-5xl">Our Services</h1>
+              <div className="flex place-items-center">
+                <hr className="basis-1/5 border-1 w-full" />
+                <h2 className="basis-full font-bold text-center text-4xl">Our Services</h2>
+                <hr className="basis-1/5 border-1 w-full" />
+              </div>
               <p className="max-w-2xl mx-auto py-4 text-center">
                 Our brand new accommodation has been specifically designed to ensure all of our furry friends have the safest and most comfortable stay with us while you’re away
               </p>
@@ -74,57 +82,57 @@ function App() {
             </div>
           </div>
           {/* Service Cards */}
-          <div className="flex justify-evenly flex-wrap gap-12 max-w-7xl mx-auto">
-            <div className="card bg-base-100 p-4 w-full shadow-sm">
+          <div className="flex justify-evenly flex-wrap gap-8 max-w-7xl mx-auto p-4">
+            <div className="card card-border bg-base-100 w-full shadow-lg">
               <figure>
                 <img
                   src={DogBoarding}
                   alt="Dog sitting in front entrance of dog boarding kennel house" />
               </figure>
-              <div className="card-body">
-                <h3 className="card-title">Dog Boarding</h3>
-                <div className="card-actions justify-end">
-                  <button className="btn btn-primary">Learn More</button>
-                </div>
+              <div className="card-body gap-4 items-center text-center">
+                <h3 className="card-title text-3xl">Pet Boarding</h3>
+                <hr className="border-1 w-full" />
+                <p>Cozy and secure accommodations for dogs & cats</p>
+                <img className="w-[56px]" src={KennelIcon} alt=""/>
               </div>
             </div>
-            <div className="card bg-base-100 p-4 w-full shadow-sm">
+            <div className="card card-border card-lg bg-base-100 w-full shadow-lg">
               <figure>
                 <img
                   src={DogDaycare}
                   alt="Two dogs playing with toys outside" />
               </figure>
-              <div className="card-body">
-                <h3 className="card-title">Dog Daycare</h3>
-                <div className="card-actions justify-end">
-                  <button className="btn btn-primary">Learn More</button>
-                </div>
+              <div className="card-body gap-4 items-center text-center">
+                <h3 className="card-title text-3xl">Dogie Daycare</h3>
+                <hr className="border-1 w-full" />
+                <p>Fun-filled playtime & socialization</p>
+                <img className="w-[56px] rotate-24" src={TennisBallIcon} alt=""/>
               </div>
             </div>
-            <div className="card bg-base-100 p-4 w-full shadow-sm">
+            <div className="card card-border card-lg bg-base-100 w-full shadow-lg">
               <figure>
                 <img
                   src={CatBoarding}
                   alt="Shoes" />
               </figure>
-              <div className="card-body">
-                <h3 className="card-title">Cat Boarding</h3>
-                <div className="card-actions justify-end">
-                  <button className="btn btn-primary">Learn More</button>
-                </div>
+              <div className="card-body gap-4 items-center text-center">
+                <h3 className="card-title text-3xl">Grooming Services</h3>
+                <hr className="border-1 w-full" />
+                <p>Bathing, trimming, & pampering</p>
+                <img className="w-[56px]" src={GroomingIcon} alt=""/>
               </div>
             </div>
-            <div className="card bg-base-100 p-4 w-full shadow-sm">
+            <div className="card card-border card-lg bg-base-100 w-full shadow-lg">
               <figure>
                 <img
                   src={DogGrooming}
                   alt="Dog with a towel on its head about to groom" />
               </figure>
-              <div className="card-body">
-                <h3 className="card-title">Grooming</h3>
-                <div className="card-actions justify-end">
-                  <button className="btn btn-primary">Learn More</button>
-                </div>
+              <div className="card-body gap-4 items-center text-center">
+                <h3 className="card-title text-3xl">Grooming</h3>
+                <hr className="border-1 w-full" />
+                <p>Professional obedience training</p>
+                <img className="w-[56px] rotate-24" src={PawsIcon} alt=""/>
               </div>
             </div>
           </div>
