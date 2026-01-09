@@ -1,15 +1,15 @@
-import companyLogo from '../assets/emerald-pet-resort-logo.png';
+import Companylogo from '../assets/paws-and-plays-logo.png';
 
 export default function Header() {
   return (
     <div className="drawer">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-      <div className="drawer-content flex flex-col">
-        <div className="navbar bg-primary p-4 text-primary-content w-full">
+      <div className="drawer-content flex flex-col shadow-sm">
+        <div className="navbar p-4 w-full">
           {/* Company Logo */}
           <div className="mr-auto">
-            <a href="" tabIndex={0}>
-              <img src={companyLogo} alt="Emerald Pet Resort" className="h-16" />
+            <a className="flex gap-4" href="" tabIndex={0}>
+              <img className="max-w-48" src={Companylogo} alt="" />
             </a>
           </div>
           {/* Mobile Hamburger */}
@@ -36,34 +36,34 @@ export default function Header() {
               onMouseEnter={(e) => (e.currentTarget.open = true)}
               onMouseLeave={(e) => (e.currentTarget.open = false)}
             >
-              <summary className="bg-primary cursor-pointer py-2 px-4 text-primary-content text-sm">Services & Pricing</summary>
-              <ul className="menu dropdown-content bg-primary gap-2 text-primary-content z-10 w-40 p-2 shadow-sm">
-                <li><a>Dog Daycare</a></li>
-                <li><a>Dog Boarding</a></li>
-                <li><a>Cat Boarding</a></li>
-                <li><a>Grooming</a></li>
+              <summary className="cursor-pointer font-medium text-base py-2 px-4">Services & Pricing</summary>
+              <ul className="menu bg-base-100 dropdown-content gap-2 text-base z-10 w-40 p-2 shadow-sm">
+                <li className="font-medium text-base"><a>Dog Daycare</a></li>
+                <li className="font-medium text-base"><a>Dog Boarding</a></li>
+                <li className="font-medium text-base"><a>Cat Boarding</a></li>
+                <li className="font-medium text-base"><a>Grooming</a></li>
               </ul>
             </details>
-            <ul className="bg-primary menu menu-horizontal p-4 text-primary-content text-sm">
-              <li><a href="" className="py-2 px-4">About us</a></li>
-              <li><a href="" className="py-2 px-4">FAQs</a></li>
-              <li><a href="" className="py-2 px-4">Contact us</a></li>
+            <ul className="menu menu-horizontal p-4">
+              <li className="font-medium text-base"><a href="" className="py-2 px-4">About us</a></li>
+              <li className="font-medium text-base"><a href="" className="py-2 px-4">FAQs</a></li>
+              <li className="font-medium text-base"><a href="" className="py-2 px-4">Contact us</a></li>
             </ul>
           </div>
           <div className="hidden lg:block">
-            <a className="btn btn-secondary btn-wide">Make a Reservation</a>
+            <a className="btn btn-primary btn-wide">Make a Reservation</a>
           </div>
         </div>
       </div>
       {/* Mobile Sidebar */}
       <div className="drawer-side">
         <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
-        <ul className="menu bg-primary max-w-[80%] min-h-full p-4 text-primary-content w-full">
+        <ul className="bg-base-100 menu max-w-[80%] min-h-full p-4 w-full">
           {/* Sidebar content here */}
           <li>
             <details>
               <summary>Services & Pricing</summary>
-              <ul className="bg-primary text-primary-content rounded-t-none p-2 w-max">
+              <ul className="text-primary-content rounded-t-none p-2 w-max">
                 <li><a>Dog Daycare</a></li>
                 <li><a>Dog Boarding</a></li>
                 <li><a>Cat Boarding</a></li>

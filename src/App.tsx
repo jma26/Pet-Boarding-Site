@@ -1,6 +1,4 @@
-import EmeraldEmployeesWithDogs from './assets/emerald-resort-employees-with-dogs.jpg';
 import CatBoarding from './assets/cat-boarding-accommodation.jpg';
-import DogBoarding from './assets/dog-boarding-accommodation.jpg';
 import DogGrooming from './assets/dog-grooming.jpg';
 import DogDaycare from './assets/dog-daycare.jpg';
 import KennelIcon from './assets/icons/kennel-icon.svg';
