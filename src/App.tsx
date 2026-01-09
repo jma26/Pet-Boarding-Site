@@ -10,13 +10,13 @@ import TennisBallIcon from './assets/icons/tennis-ball-icon.svg';
 import { useRef, useState } from 'react';
 
 function App() {
-  const iframeRef = useRef(null);
+  const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const [isPaused, setIsPaused] = useState(false);
 
   const toggleVideo = () => {
     if (!iframeRef.current) return;
 
-    iframeRef.current.contentWindow.postMessage(
+    iframeRef.current?.contentWindow?.postMessage(
       JSON.stringify({
         method: isPaused ? "play" : "pause",
       }),
