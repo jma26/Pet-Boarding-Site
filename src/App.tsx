@@ -43,9 +43,9 @@ function App() {
           ></iframe>
         </div>
         {/* Hero CTA */}
-        <div className="mx-auto max-w-5xl px-4 py-8 text-center">
-          <h1 className="font-bold text-center text-5xl">Maraboon Pet Resort</h1>
-          <p className="mt-4">Best of care, safety, and comfort for your pets while you're away</p>
+        <div className="mx-auto px-4 py-8 text-center">
+          <h1 className="font-bold text-center text-5xl">A Pawfect Home Away From Home</h1>
+          <p className="italic mt-4 text-2xl">Best of care, safety, and comfort for your pets while you're away</p>
           <div className="mt-6 flex justify-center gap-4">
             <button className="btn btn-primary">Make a Reservation</button>
             <button className="btn btn-outline" onClick={toggleVideo} aria-pressed={isPaused}>
@@ -57,80 +57,66 @@ function App() {
       {/* Services  */}
       <section className="hero">
         <div>
-          <div className="hero-content flex-col gap-4 pt-4 pb-8 w-full">
-            <img
-              src={EmeraldEmployeesWithDogs}
-              className="rounded-lg shadow-2xl"
-              alt="Emerald employees with dogs outside"
-            />
-            <div className="lg:mx-12">
+          <div className="hero-content flex-col gap-4 py-8 w-full lg:gap-8">
+            <div className="w-full">
               <div className="flex place-items-center">
-                <hr className="basis-1/5 border-1 w-full" />
-                <h2 className="basis-full font-bold text-center text-4xl">Our Services</h2>
-                <hr className="basis-1/5 border-1 w-full" />
+                <hr className="flex-2 border-[var(--color-base-300)] border-1" />
+                <h2 className="grow-1 font-bold color-neutral text-center text-4xl">Our Services</h2>
+                <hr className="flex-2 border-[var(--color-base-300)] border-1" />
               </div>
-              <p className="max-w-2xl mx-auto py-4 text-center">
-                Our brand new accommodation has been specifically designed to ensure all of our furry friends have the safest and most comfortable stay with us while you’re away
-              </p>
-              <ul className="list-disc list-inside max-w-fit mx-auto">
-                <li>State of the art indoor/outdoor runs</li>
-                <li>Climate control accommodations</li>
-                <li>Large outdoor play yards</li>
-                <li>24/7 staff monitoring</li>
-                <li>Live webcams</li>
-              </ul>
+              <p className="max-w-2xl mx-auto py-4 text-center text-2xl italic">We offer the best care for your pets!</p>
             </div>
           </div>
           {/* Service Cards */}
-          <div className="flex justify-evenly flex-wrap gap-8 max-w-7xl mx-auto p-4">
-            <div className="card card-border bg-base-100 w-full shadow-lg">
+          <div className="grid gap-8 max-w-7xl mx-auto px-4 md:grid-cols-2 lg:grid-cols-4">
+            <div className="card card-border bg-base-100 cursor-pointer group transition-all duration-250 ease-in shadow-sm hover:shadow-lg">
               <figure>
                 <img
-                  src={DogBoarding}
+                  src={DogDaycare}
                   alt="Dog sitting in front entrance of dog boarding kennel house" />
               </figure>
-              <div className="card-body gap-4 items-center text-center">
-                <h3 className="card-title text-3xl">Pet Boarding</h3>
-                <hr className="border-1 w-full" />
+              <div className="card-body items-center text-center">
+                <h3 className="card-title text-2xl">Pet Boarding</h3>
+                <hr className="border-1 w-full transition-all duration-250 ease-in scale-x-50 group-hover:scale-x-100" />
                 <p>Cozy and secure accommodations for dogs & cats</p>
                 <img className="w-[56px]" src={KennelIcon} alt=""/>
               </div>
             </div>
-            <div className="card card-border card-lg bg-base-100 w-full shadow-lg">
+            <div className="card card-border bg-base-100 cursor-pointer group transition-all duration-250 ease-in shadow-sm hover:shadow-lg">
               <figure>
                 <img
                   src={DogDaycare}
                   alt="Two dogs playing with toys outside" />
               </figure>
               <div className="card-body gap-4 items-center text-center">
-                <h3 className="card-title text-3xl">Dogie Daycare</h3>
-                <hr className="border-1 w-full" />
+                <h3 className="card-title text-2xl">Doggy Daycare</h3>
+                <hr className="border-1 w-full transition-all duration-250 ease-in scale-x-50 group-hover:scale-x-100" />
                 <p>Fun-filled playtime & socialization</p>
                 <img className="w-[56px] rotate-24" src={TennisBallIcon} alt=""/>
               </div>
             </div>
-            <div className="card card-border card-lg bg-base-100 w-full shadow-lg">
+            <div className="card card-border bg-base-100 cursor-pointer group transition-all duration-250 ease-in shadow-sm hover:shadow-lg">
               <figure>
                 <img
                   src={CatBoarding}
                   alt="Shoes" />
               </figure>
               <div className="card-body gap-4 items-center text-center">
-                <h3 className="card-title text-3xl">Grooming Services</h3>
-                <hr className="border-1 w-full" />
+                <h3 className="card-title text-2xl">Grooming Services</h3>
+                <hr className="border-1 w-full transition-all duration-250 ease-in scale-x-50 group-hover:scale-x-100" />
                 <p>Bathing, trimming, & pampering</p>
                 <img className="w-[56px]" src={GroomingIcon} alt=""/>
               </div>
             </div>
-            <div className="card card-border card-lg bg-base-100 w-full shadow-lg">
+            <div className="card card-border bg-base-100 cursor-pointer group transition-all duration-250 ease-in shadow-sm hover:shadow-lg">
               <figure>
                 <img
                   src={DogGrooming}
                   alt="Dog with a towel on its head about to groom" />
               </figure>
               <div className="card-body gap-4 items-center text-center">
-                <h3 className="card-title text-3xl">Grooming</h3>
-                <hr className="border-1 w-full" />
+                <h3 className="card-title text-2xl">Grooming</h3>
+                <hr className="border-1 w-full transition-all duration-250 ease-in scale-x-50 group-hover:scale-x-100" />
                 <p>Professional obedience training</p>
                 <img className="w-[56px] rotate-24" src={PawsIcon} alt=""/>
               </div>
