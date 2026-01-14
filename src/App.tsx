@@ -169,6 +169,65 @@ function App() {
           </div>
         </div>
       </section>
+      {/* Our Facilities */}
+      <section className="hero">
+        <div>
+          <div className="hero-content flex-col gap-8 p-8 w-full">
+            <div className="w-full">
+              <div className="flex place-items-center">
+                <hr className="flex-2 border-[var(--color-base-300)] border-1" />
+                <h2 className="grow-1 font-bold color-neutral text-center text-4xl">Our Facilities</h2>
+                <hr className="flex-2 border-[var(--color-base-300)] border-1" />
+              </div>
+              <p className="max-w-2xl mx-auto py-4 text-center text-2xl italic">Designed for comfort, safety, and happy paws</p>
+            </div>
+            {/* Service Cards */}
+            <div className="grid gap-8 max-w-7xl mx-auto md:grid-cols-2 lg:grid-cols-4">
+              <div className="card card-border bg-base-100 cursor-pointer group transition-all duration-250 ease-in shadow-sm hover:shadow-lg">
+                <figure>
+                  <img
+                    src={DogDaycare}
+                    alt="Dog sitting in front entrance of dog boarding kennel house" />
+                </figure>
+                <div className="card-body items-center text-center">
+                  <h3 className="card-title text-2xl">Spacious outdoor area</h3>
+                </div>
+              </div>
+              <div className="card card-border bg-base-100 cursor-pointer group transition-all duration-250 ease-in shadow-sm hover:shadow-lg">
+                <figure>
+                  <img
+                    src={DogDaycare}
+                    alt="Two dogs playing with toys outside" />
+                </figure>
+                <div className="card-body gap-4 items-center text-center">
+                  <h3 className="card-title text-2xl">Kennel accommodation</h3>
+                </div>
+              </div>
+              <div className="card card-border bg-base-100 cursor-pointer group transition-all duration-250 ease-in shadow-sm hover:shadow-lg">
+                <figure>
+                  <img
+                    src={CatBoarding}
+                    alt="Shoes" />
+                </figure>
+                <div className="card-body gap-4 items-center text-center">
+                  <h3 className="card-title text-2xl">Grooming room</h3>
+                </div>
+              </div>
+              <div className="card card-border bg-base-100 cursor-pointer group transition-all duration-250 ease-in shadow-sm hover:shadow-lg">
+                <figure>
+                  <img
+                    src={DogGrooming}
+                    alt="Dog with a towel on its head about to groom" />
+                </figure>
+                <div className="card-body gap-4 items-center text-center">
+                  <h3 className="card-title text-2xl">Indoor playroom</h3>
+                </div>
+              </div>
+            </div>
+            <button className="btn btn-wide btn-primary mt-4 self-center">View Gallery</button>
+          </div>
+        </div>
+      </section>
     </>
   )
 }
